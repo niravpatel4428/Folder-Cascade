@@ -7,11 +7,11 @@ import icon from "@/public/images/svg/android.svg"
 import BtnAppStore from './btnAppStore';
 
 const navLinks = [
-    { label: "Home", href: "/" },
-    { label: "Social", href: "/" },
-    { label: "Features", href: "/" },
-    { label: "Pricing", href: "/" },
-    { label: "FAQ", href: "/" },
+    { label: "Home", href: "#home" },
+    { label: "Social", href: "#social" },
+    { label: "Features", href: "#features" },
+    { label: "Pricing", href: "#pricing" },
+    { label: "FAQ", href: "#faq" },
 ];
 
 

@@ -12,7 +12,7 @@ const features = [
 
 const OfferPricing = () => {
     return (
-        <section className="relative py-10 md:py-15 2xl:py-20">
+        <section id="pricing" className="relative py-10 md:py-15 2xl:py-20">
             <div className="container">
                 <div className="flex justify-center">
                     <div className="bg-cs-orange-100 py-2 md:py-4.5 px-8 md:px-12.5 rounded-t-full text-center max-sm:w-60/100">

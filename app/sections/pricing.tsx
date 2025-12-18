@@ -12,7 +12,8 @@ const features = [
 
 const Pricing = () => {
     return (
-        <section className="py-10 md:py-15 2xl:py-20">
+        <>
+        <section id="pricing" className="py-10 md:py-15 2xl:py-20">
             <div className="container">
                 <div className="bg-[#FFF6EC] p-4 md:p-6 2xl:p-7.5 border border-cs-orange-100/30 rounded-[50px]">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-7.5 items-center">
@@ -62,6 +63,7 @@ const Pricing = () => {
                 </div>
             </div>
         </section>
+        </>
     );
 };
 

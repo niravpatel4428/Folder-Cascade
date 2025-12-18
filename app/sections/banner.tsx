@@ -5,7 +5,7 @@ import icon from "@/public/images/svg/android.svg"
 const Banner = () => {
     return (
         <>
-            <section className="bg-cs-gray50 pb-10 md:pb-20 xl:pb-30 3xl:pb-37.5">
+            <section id='home' className="bg-cs-gray50 pb-10 md:pb-20 xl:pb-30 3xl:pb-37.5">
                 <div className="container">
                     <div className="pt-13.5 space-y-13.5 text-center w-full max-w-250 mx-auto">
                         <div>
