@@ -5,18 +5,18 @@ import bigIcon from "@/public/images/svg/footer-bigIcon.svg";
 import mailIcon from "@/public/images/svg/mailIcon.svg";
 
 const topNavLinks = [
-  { label: "Home", href: "/" },
-  { label: "Social", href: "/" },
-  { label: "Features", href: "/" },
-  { label: "Pricing", href: "/" },
-  { label: "FAQ", href: "/" },
+    { label: "Home", href: "/" },
+    { label: "Social", href: "/" },
+    { label: "Features", href: "/" },
+    { label: "Pricing", href: "/" },
+    { label: "FAQ", href: "/" },
 ];
 
 const bottomLinks = [
-  { label: "Support", href: "/" },
-  { label: "Terms", href: "/" },
-  { label: "Privacy", href: "/" },
-  { label: "Contact", href: "/" },
+    { label: "Support", href: "/" },
+    { label: "Terms", href: "/" },
+    { label: "Privacy", href: "/" },
+    { label: "Contact", href: "/" },
 ];
 
 const Footer = () => {
@@ -41,11 +41,15 @@ const Footer = () => {
 
                     {/* Navigation */}
                     <nav className="flex flex-wrap max-md:justify-center gap-x-6 gap-y-3 md:gap-10 2xl:gap-18.5 text-sm text-black/60">
-                        <Link href="/" className="text-lg font-normal leading-normal tracking-tighter hover:text-black transition-all duration-300">Home</Link>
-                        <Link href="/" className="text-lg font-normal leading-normal tracking-tighter hover:text-black transition-all duration-300">Social</Link>
-                        <Link href="/" className="text-lg font-normal leading-normal tracking-tighter hover:text-black transition-all duration-300">Features</Link>
-                        <Link href="/" className="text-lg font-normal leading-normal tracking-tighter hover:text-black transition-all duration-300">Pricing</Link>
-                        <Link href="/" className="text-lg font-normal leading-normal tracking-tighter hover:text-black transition-all duration-300">FAQ</Link>
+                        {topNavLinks.map((item, index) => (
+                            <Link
+                                key={index}
+                                href={item.href}
+                                className="text-lg font-normal leading-normal tracking-tighter hover:text-black transition-all duration-300"
+                            >
+                                {item.label}
+                            </Link>
+                        ))}
                     </nav>
                 </div>
 
@@ -63,10 +67,15 @@ const Footer = () => {
                     <p className="text-lg font-normal leading-normal tracking-tighter">Copyright © 2025 Folder Cascade. All Rights Reserved.</p>
 
                     <div className="flex flex-wrap max-md:justify-center items-center max-md:gap-y-3 gap-6 2xl:gap-9">
-                        <Link href="/" className="text-lg font-normal leading-normal tracking-tighter hover:text-black transition-all duration-300">Support</Link>
-                        <Link href="/" className="text-lg font-normal leading-normal tracking-tighter hover:text-black transition-all duration-300">Terms</Link>
-                        <Link href="/" className="text-lg font-normal leading-normal tracking-tighter hover:text-black transition-all duration-300">Privacy</Link>
-                        <Link href="/" className="text-lg font-normal leading-normal tracking-tighter hover:text-black transition-all duration-300">Contact</Link>
+                        {bottomLinks.map((item, index) => (
+                            <Link
+                                key={index}
+                                href={item.href}
+                                className="text-lg font-normal leading-normal tracking-tighter hover:text-black transition-all duration-300"
+                            >
+                                {item.label}
+                            </Link>
+                        ))}
                     </div>
                 </div>
 
