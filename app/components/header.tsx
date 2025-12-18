@@ -5,7 +5,7 @@ import Image from 'next/image';
 import logo from "@/public/images/folder-icon.png";
 import icon from "@/public/images/svg/android.svg"
 import BtnAppStore from './btnAppStore';
-
+import { useLenis } from "./LenisProvider";
 const navLinks = [
     { label: "Home", href: "#home" },
     { label: "Social", href: "#social" },
@@ -14,6 +14,31 @@ const navLinks = [
     { label: "FAQ", href: "#faq" },
 ];
 
+
+const HeaderNav = () => {
+    const lenis = useLenis();
+
+    const handleScroll = (
+        e: React.MouseEvent,
+        target: string
+    ) => {
+        e.preventDefault();
+        lenis?.scrollTo(target);
+    };
+
+    return (
+        <>
+            <ul className='flex max-xl:flex-col items-center max-xl:gap-10 gap-5'>
+                {navLinks.map((link, index) => (
+                    <li key={index}>
+                        <Link href={link.href} onClick={(e) => handleScroll(e, link.href)} className='min-w-27.5 block text-center py-1.5 px-5 text-black font-normal text-lg leading-snug tracking-tight bg-white rounded-30 border border-cs-sky-50/30 hover:text-white hover:bg-cs-sky-50 transition-all duration-300'> {link.label}
+                        </Link>
+                    </li>
+                ))}
+            </ul>
+        </>
+    );
+};
 
 const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -72,14 +97,7 @@ const Header = () => {
                             >
                                 <div className={`${menuOpen ? "" : ""
                                     } h-full max-xl:pt-32 max-xl:bg-white max-xl:backdrop-blur-3xl xl:flex-1`}>
-                                    <ul className='flex max-xl:flex-col items-center max-xl:gap-10 gap-5'>
-                                        {navLinks.map((link, index) => (
-                                            <li key={index}>
-                                                <Link href={link.href} className='min-w-27.5 block text-center py-1.5 px-5 text-black font-normal text-lg leading-snug tracking-tight bg-white rounded-30 border border-cs-sky-50/30 hover:text-white hover:bg-cs-sky-50 transition-all duration-300'> {link.label}
-                                                </Link>
-                                            </li>
-                                        ))}
-                                    </ul>
+                                    <HeaderNav />
                                 </div>
                             </div>
 
