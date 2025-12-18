@@ -46,7 +46,7 @@ const FaqItem = ({
         <div className="border-b border-black/10">
             <button
                 onClick={onClick}
-                className="flex w-full items-center justify-between gap-2 py-3.5 text-left"
+                className="flex w-full items-center justify-between gap-2 py-3.5 text-left cursor-pointer"
             >
                 <span className="text-base leading-5.5 font-medium text-black">
                     {item.q}
