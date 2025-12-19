@@ -57,10 +57,10 @@ export default function Home() {
       {/* hide this icon when screen scrolls */}
       {!isScrolled && (
         <div className="w-full max-w-480 mx-auto">
-          <div className="absolute bottom-5 right-5">
-            <div className="relative size-15 lg:size-20">
+          <div className="absolute bottom-5 right-5 3xl:bottom-8 3xl:right-8">
+            <div className="relative size-20 3xl:size-25">
               <Image src={macOs} alt="icon" className='object-contain slow-spin' />
-              <div className="absolute top-1/2 left-1/2 -translate-1/2 size-7.5 lg:size-10">
+              <div className="absolute top-1/2 left-1/2 -translate-1/2 size-10 3xl:size-12.5">
                 <Image src={appleIcon} alt="icon" className='object-contain' />
               </div>
             </div>
