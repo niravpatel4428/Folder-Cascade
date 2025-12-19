@@ -1,3 +1,4 @@
+"use client";
 import Header from "./components/header";
 import Banner from "./sections/banner";
 import Contact from "./sections/contact";
@@ -9,8 +10,31 @@ import Pricing from "./sections/pricing";
 import ProblemSolutions from "./sections/problemSolutions";
 import VideoSection from "./sections/videoSection";
 import WhoUse from "./sections/whoUse";
+import macOs from "@/public/images/svg/macOs.svg"
+import appleIcon from "@/public/images/svg/appleIcon.svg"
+import Image from 'next/image';
+import { useEffect, useState } from "react";
 
 export default function Home() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  // Detect scroll event to hide/show the icon
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) { // Adjust the threshold as needed
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <>
       <div className="bg-cs-gray50">
@@ -28,6 +52,21 @@ export default function Home() {
         <Faq />
       </main>
       <Footer />
+
+
+      {/* hide this icon when screen scrolls */}
+      {!isScrolled && (
+        <div className="w-full max-w-480 mx-auto">
+          <div className="absolute bottom-5 right-5">
+            <div className="relative size-15 lg:size-20">
+              <Image src={macOs} alt="icon" className='object-contain slow-spin' />
+              <div className="absolute top-1/2 left-1/2 -translate-1/2 size-7.5 lg:size-10">
+                <Image src={appleIcon} alt="icon" className='object-contain' />
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 }

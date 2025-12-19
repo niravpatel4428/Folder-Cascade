@@ -44,7 +44,7 @@
   --breakpoint-lg: 64rem;
   --breakpoint-xl: 80rem;
   --breakpoint-2xl: 90rem;
-  --breakpoint-3xl: 105rem;
+  --breakpoint-3xl: 106.25rem;
   --breakpoint-4xl: 110rem;
 }
 
@@ -83,6 +83,9 @@ body {
   @media (width: 1700px) {
     max-width: 1682px;
   }
+  @media (width: 1760px) {
+    max-width: 1682px;
+  }
 }
 
 .heading {
@@ -94,4 +97,19 @@ body {
   -webkit-background-clip: text;
   background-clip: text;
   padding: 0 5px;
+}
+
+
+.slow-spin {
+  animation: spin 8s linear infinite;
+  -webkit-animation: spin 8s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

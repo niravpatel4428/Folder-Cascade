@@ -55,11 +55,11 @@ const HeaderNav = ({ toggleCollapse }: { toggleCollapse: () => void }) => {
             <ul className='flex max-xl:flex-col items-center max-xl:gap-10 gap-5'>
                 {navLinks.map((link, index) => (
                     <li key={index}>
-                        <Link href={link.href} onClick={(e) => {handleScroll(e, link.href);toggleCollapse()}} className={`min-w-27.5 block text-center py-1.5 px-5 text-black font-normal text-lg leading-snug tracking-tight bg-white rounded-30 border border-cs-sky-50/30 hover:text-white hover:bg-cs-sky-50 transition-all duration-300 ${activeHash === link.href ? "text-white! bg-cs-sky-50!" : ""}`}> {link.label}
-                    </Link>
+                        <Link href={link.href} onClick={(e) => { handleScroll(e, link.href); toggleCollapse() }} className={`min-w-27.5 block text-center py-1.5 px-5 text-black font-normal text-lg leading-snug tracking-tight bg-white rounded-30 border border-cs-sky-50/30 hover:text-white hover:bg-cs-sky-50 transition-all duration-300 ${activeHash === link.href ? "text-white! bg-cs-sky-50!" : ""}`}> {link.label}
+                        </Link>
                     </li>
                 ))}
-        </ul >
+            </ul >
         </>
     );
 };
@@ -87,7 +87,7 @@ const Header = () => {
         <>
             <header className={`pt-5 ${menuOpen ? 'bg-white' : ''} fixed top-0 left-0 right-0 z-50`}>
                 <div className="container 4xl:max-w-438">
-                    <div className="relative z-51 bg-cs-gray100 rounded-4xl p-3.5">
+                    <div className="relative z-51 bg-cs-gray100 rounded-4xl p-3.5 border border-black/10">
                         <div className="flex items-center justify-between gap-10">
                             <div className="xl:flex-1 pl-0.5">
                                 <Link href="/" className='block w-fit relative z-51'>

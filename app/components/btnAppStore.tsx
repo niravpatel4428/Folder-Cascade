@@ -7,13 +7,14 @@ interface BtnAppStoreProps {
     mainClass?: string;
     icon: StaticImageData;
     usePlayfair?: boolean;
+    onClick?: () => void;
 }
 
 const BtnAppStore = ({
     href = "/",
     label,
     icon,
-    mainClass
+    mainClass, onClick,
 }: BtnAppStoreProps) => {
     return (
         <Link
@@ -27,7 +28,7 @@ const BtnAppStore = ({
         tracking-tight rounded-2xl
         hover:bg-cs-orange-100/90
         transition-all duration-300 ${mainClass}
-      `}
+      `} onClick={onClick}
         >
             {label}
 

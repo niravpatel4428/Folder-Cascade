@@ -104,7 +104,7 @@ const ImageCard: React.FC<ImageCardProps> = ({ img, title, desc }) => {
         <div className="relative rounded-30 overflow-hidden min-h-60 md:min-h-65 2xl:min-h-72.5 group">
             <Image src={img} alt={title} fill className="object-cover group-hover:scale-110 transition-all duration-700" />
             <div className="absolute inset-0 bg-linear-to-b from-transparent to-black/60" />
-            <div className="absolute left-0 right-0 bottom-0 h-25 backdrop-blur-xs" />
+            <div className="absolute left-0 right-0 bottom-0 h-25 lg:h-30 backdrop-blur-xs" />
 
             <div className="absolute bottom-7.5 left-7.5 right-7.5 space-y-1.5 z-3">
                 <h4 className="text-white font-semibold text-xl md:text-2xl xl:text-3xl 2xl:text-[32px] leading-normal tracking-tighter">{title}</h4>
