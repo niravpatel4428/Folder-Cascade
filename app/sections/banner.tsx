@@ -21,8 +21,13 @@ const Banner = () => {
                             </div>
                         </div>
 
-                        <div className="w-full max-w-305 mx-auto bg-linear-to-l from-white to-cs-orange-50 rounded-30 overflow-hidden p-1.25">
-                            <video src="/images/hero.mp4" autoPlay muted playsInline className='w-full h-full rounded-[28px] min-h-62 object-cover' ></video>
+                        <div>
+                            <div className="bg-cs-orange-100 w-fit py-1.5 md:py-4 px-8 md:px-12.5 mx-auto rounded-t-full text-center max-sm:w-60/100">
+                                <p className="text-white text-xs sm:text-base md:text-xl 2xl:text-2xl font-semibold tracking-tighter leading-none">Mac-only</p>
+                            </div>
+                            <div className="w-full max-w-305 mx-auto bg-linear-to-l from-white to-cs-orange-50 rounded-30 overflow-hidden p-1.25">
+                                <video src="/images/hero.mp4" autoPlay muted playsInline className='w-full h-full rounded-[28px] min-h-62 object-cover' ></video>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -44,7 +44,7 @@ const WhoUse = () => {
             <div className="container">
                 <div className="space-y-10 xl:space-y-12">
                     <h4 className="text-black font-medium leading-tighter text-5xl md:text-6xl 2xl:text-64 tracking-tighter text-center">
-                        Who Uses <span className="heading">Folder Cascade</span>
+                        Who <span className="heading">Uses This</span>
                     </h4>
 
                     <div className="grid grid-cols-1 md:grid-cols-1 xl:grid-cols-3 gap-5">
