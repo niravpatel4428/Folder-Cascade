@@ -69,7 +69,7 @@ const Header = () => {
     const toggleCollapse = () => setMenuOpen((prev) => !prev);
     // Disable body scroll when the menu is open
     useEffect(() => {
-        const isMobile = window.matchMedia("(max-width: 1279px)").matches;
+        const isMobile = window.matchMedia("(max-width: 1280px)").matches;
         if (menuOpen && isMobile) {
             // Add overflow-hidden to the body to prevent scrolling
             document.body.style.overflow = "hidden";

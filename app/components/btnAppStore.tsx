@@ -31,7 +31,7 @@ const BtnAppStore = ({
         >
             {label}
 
-            <span className="rounded-md bg-white size-10 flex items-center justify-center">
+            <span className="rounded-md bg-white size-10 flex-none flex items-center justify-center">
                 <Image
                     src={icon}
                     alt="app store icon"
