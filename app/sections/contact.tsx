@@ -10,7 +10,7 @@ const Contact = () => {
                     <div className="w-full max-w-337.25 mx-auto">
                         <div className="relative rounded-20 py-10 md:py-15 2xl:py-20 px-5 md:px-8 2xl:px-10">
                             <div className="text-center relative z-3 space-y-12.5">
-                                <h6 className='text-center text-white font-medium leading-tighter text-5xl md:text-6xl 2xl:text-64 tracking-tighter'>Get it on
+                                <h6 className='text-center text-white font-medium leading-tighter text-40 xs:text-5xl md:text-6xl 2xl:text-64 tracking-tighter'>Get it on
                                     <br />  <span className="bg-linear-to-r from-white to-[#B5D6E3] text-transparent bg-clip-text font-playfair italic">the Mac App Store</span>
                                 </h6>
 
@@ -21,9 +21,13 @@ const Contact = () => {
                                 </Link>
                             </div>
 
+
+                            {/* image */}
                             <div className="absolute inset-0 z-1">
                                 <Image src={bg} alt="bg" className="h-full w-full object-cover rounded-20" />
                             </div>
+                            {/* gradient */}
+                            <div className="absolute inset-0 z-2 bg-radial from-black/0 to-black/50 rounded-20"></div>
                         </div>
                     </div>
                 </div>

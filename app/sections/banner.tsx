@@ -1,23 +1,29 @@
-import React from 'react'
+"use client";
 import BtnAppStore from '../components/btnAppStore'
 import icon from "@/public/images/svg/android.svg"
+import useIsMac from '../components/useIsMac';
 
 const Banner = () => {
+    const isMac = useIsMac();
     return (
         <>
-            <section id='home' className="bg-cs-gray50 pb-10 md:pb-20 xl:pb-30 3xl:pb-37.5">
+            <section id='home' className="bg-cs-gray50 pt-27 pb-10 md:pb-20 xl:pb-30 3xl:pb-37.5">
                 <div className="container">
                     <div className="pt-13.5 space-y-13.5 text-center w-full max-w-250 mx-auto">
                         <div>
                             <div className="space-y-4">
-                                <h1 className='text-black font-medium leading-tighter text-5xl md:text-6xl 2xl:text-64 tracking-tighter'>Color entire folder trees <span className='tracking-tighter heading'>In one Click.</span></h1>
+                                <h1 className='text-black font-medium leading-tighter text-40 xs:text-5xl md:text-6xl 2xl:text-64 tracking-tighter'>Color entire folder trees <span className='tracking-tighter heading'>In one Click.</span></h1>
 
                                 <div className="space-y-2 text-black text-22 font-medium tracking-tighter leading-normal">
                                     <p>macOS doesn&apos;t cascade labels, FolderCascade does.</p>
                                 </div>
                             </div>
                             <div className="mt-7.5 flex justify-center">
-                                <BtnAppStore label='Download on the Mac App Store' icon={icon} />
+                                {isMac ? (
+                                    <BtnAppStore label='Download on the Mac App Store' icon={icon} />
+                                ) : (
+                                    <BtnAppStore label="Send link to my Mac" icon={icon} href="mailto:?subject=App%20Link&body=Check%20out%20this%20app%20on%20the%20Mac%20App%20Store.%20[Insert%20link%20here]" />
+                                )}
                             </div>
                         </div>
 

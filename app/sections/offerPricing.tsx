@@ -59,7 +59,7 @@ const OfferPricing = () => {
                                 ))}
                             </ul>
 
-                            <button className="w-full bg-cs-orange-100 hover:bg-cs-orange-100/90 transition-colors text-white rounded-2xl p-2.5 font-semibold text-xl tracking-tighter leading-normal">
+                            <button className="w-full bg-cs-orange-100 hover:bg-cs-orange-100/90 transition-colors cursor-pointer text-white rounded-2xl p-2.5 font-semibold text-xl tracking-tighter leading-normal">
                                 Purchase Now
                             </button>
                         </div>

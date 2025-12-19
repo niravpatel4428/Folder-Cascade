@@ -82,11 +82,11 @@ const Faq = () => {
     const [active, setActive] = useState<number | null>(0);
     return (
         <>
-            <section className='relative py-10 md:py-15 2xl:py-20'>
+            <section id="faq" className='relative py-10 md:py-15 2xl:py-20'>
                 <div className="container">
                     <div className="w-full max-w-337.25 mx-auto">
                         <div className="mb-10 md:mb-12.5">
-                            <h6 className="text-black font-medium leading-tighter text-5xl md:text-6xl 2xl:text-64 tracking-tighter text-center">
+                            <h6 className="text-black font-medium leading-tighter text-40 xs:text-5xl md:text-6xl 2xl:text-64 tracking-tighter text-center">
                                 Frequently <span className="heading">Asked Questions</span>
                             </h6>
                         </div>

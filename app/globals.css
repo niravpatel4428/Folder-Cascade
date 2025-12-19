@@ -93,4 +93,5 @@ body {
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
+  padding: 0 5px;
 }

@@ -23,7 +23,7 @@ const ProblemSolutions = () => {
             <section id="social" className="py-10 md:py-15 2xl:py-20">
                 <div className="container">
                     <div className="space-y-10 xl:space-y-12">
-                        <h2 className="text-black font-medium leading-tighter text-5xl md:text-6xl 2xl:text-64 tracking-tighter text-center">
+                        <h2 className="text-black font-medium leading-tighter text-40 xs:text-5xl md:text-6xl 2xl:text-64 tracking-tighter text-center">
                             Problem <span className="tracking-tighter heading">Solutions</span>
                         </h2>
 

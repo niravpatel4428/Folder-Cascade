@@ -36,7 +36,7 @@ const KeyFeatures = () => {
         <section id="features" className="bg-cs-gray50 py-10 md:py-20 xl:py-30 3xl:py-37.5">
             <div className="container">
                 <div className="space-y-10 xl:space-y-12">
-                    <h3 className="text-black font-medium leading-tighter text-5xl md:text-6xl 2xl:text-64 tracking-tighter text-center">
+                    <h3 className="text-black font-medium leading-tighter text-40 xs:text-5xl md:text-6xl 2xl:text-64 tracking-tighter text-center">
                         Key <span className="tracking-tighter heading">Features</span>
                     </h3>
 
